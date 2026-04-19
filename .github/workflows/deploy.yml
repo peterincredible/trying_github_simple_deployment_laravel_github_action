@@ -12,11 +12,11 @@ jobs:
       - name: Execute remote SSH commands using password
         uses: appleboy/ssh-action@v1
         with:
-        host: ${{ secrets.HOST }}
-        username: ubuntu
-        key: ${{ secrets.KEY }}
-        script: |
-          cd /var/www/trying_github_simple_deployment_laravel_github_action
-          sudo git pull
+          host: ${{ secrets.HOST }}
+          username: ubuntu
+          key: ${{ secrets.KEY }}
+          script: |
+            cd /var/www/trying_github_simple_deployment_laravel_github_action
+            sudo git pull
       - name: done
         run: echo "done deploying"
